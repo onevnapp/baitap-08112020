@@ -117,6 +117,10 @@
               "devServerTarget": "angular-shopping-cart-example:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

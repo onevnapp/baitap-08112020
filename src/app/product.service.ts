@@ -44,7 +44,7 @@ export class ProductService {
   ];
 
   init() {
-    this.products = this.products2;
+    this.products = Object.assign([], this.products2);
   }
 
   getProducts(): Product[] {
