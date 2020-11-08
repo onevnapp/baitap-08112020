@@ -1,4 +1,4 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 
 import { ProductService } from './product.service';
 import { PromoCodeService } from './promo-code.service';
@@ -6,16 +6,16 @@ import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
-export class AppComponent implements DoCheck {
+export class AppComponent implements DoCheck, OnInit {
   products: Product[];
-  numberItems: number = 0;
-  subTotal: number = 0;
-  discountPercent: number = 0;
-  discount: number = 0;
-  taxPercent: number = 10;
-  tax: number = 0;
+  numberItems = 0;
+  subTotal = 0;
+  discountPercent = 0;
+  discount = 0;
+  taxPercent = 10;
+  tax = 0;
 
   constructor(
     private productService: ProductService,
@@ -58,5 +58,10 @@ export class AppComponent implements DoCheck {
         'Sorry, the promotional code you entered is not valid! Try code "AUTUMN" (discount 10% to all cart items) or "WINTER" (discount 20% to all cart items).'
       );
     }
+  }
+
+  shoppingNow() {
+    this.productService.init();
+    this.products = this.productService.getProducts();
   }
 }

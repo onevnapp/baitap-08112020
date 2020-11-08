@@ -19,8 +19,10 @@
     "@angular/platform-browser": "^10.2.1",
     "@angular/platform-browser-dynamic": "^10.2.1",
     "@angular/router": "^10.2.1",
+    "angul": "^1.0.0",
+    "angular-cli-ghpages": "^0.6.2",
     "rxjs": "~6.6.3",
-    "tslib": "^2.0.0",
+    "tslib": "^2.0.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -29,9 +31,9 @@
     "@angular/compiler-cli": "^10.2.1",
     "@angular/language-service": "^10.2.1",
     "@types/jasmine": "~3.3.8",
-    "@types/jasminewd2": "~2.0.3",
+    "@types/jasminewd2": "^2.0.8",
     "@types/node": "^12.11.1",
-    "codelyzer": "^5.1.2",
+    "codelyzer": "^5.2.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",

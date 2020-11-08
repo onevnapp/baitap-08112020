@@ -24,6 +24,29 @@ export class ProductService {
     }
   ];
 
+  products2: Product[] = [
+    {
+      id: 1,
+      name: 'PRODUCT ITEM NUMBER 1',
+      description: 'Description for product item number 1',
+      image: 'https://via.placeholder.com/200x150',
+      price: 5.99,
+      quantity: 2
+    },
+    {
+      id: 2,
+      name: 'PRODUCT ITEM NUMBER 2',
+      description: 'Description for product item number 2',
+      image: 'https://via.placeholder.com/200x150',
+      price: 9.99,
+      quantity: 1
+    }
+  ];
+
+  init() {
+    this.products = this.products2;
+  }
+
   getProducts(): Product[] {
     return this.products;
   }
